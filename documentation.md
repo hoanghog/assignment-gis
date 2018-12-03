@@ -7,20 +7,25 @@
 - *I used links where appropriate*
 
 # Overview
+Tato aplikacia zobrazuje jazera na Slovensku.
+- Zobrazuje iba jazera vacsie ako je priemerna velkost jazier na Slovensku
+- Zobrazuje jazera na zaklade krajov, kazdy kraj ma vypisany pocet jazier
+- Po kliknuti na marker jazera sa zobrazi detail tohto jazera a 5 najblizsich sluzieb dostupnych pri jazere (obcerstvenie, toalety, atd.) 
 
-This application shows hotels in Bratislava on a map. Most important features are:
-- search by proximity to my current location
-- search by hotel name
-- intelligent ordering - by proximity and by hotel features
-- hotels on the map are color coded by their quality assigned in stars (standard)
+# Ukazka aplikacie
 
-This is it in action:
+![Screenshot](ss1.png)
+Ukazka prvej obrazovky, kde mozeme vidiet 3 hlavne okna. Na lavo je vyber regionov, v strede mozeme vidiet samotnu mapu a naspodku aplikacie sa zobrazuju volane [REST API](#api).
 
-![Screenshot](screenshot.png)
+![Screenshot](ss2.png)
+Mozeme vidiet zobrazene jazera z oblasti Bratislavskeho kraja.
 
-The application has 2 separate parts, the client which is a [frontend web application](#frontend) using mapbox API and mapbox.js and the [backend application](#backend) written in [Rails](http://rubyonrails.org/), backed by PostGIS. The frontend application communicates with backend using a [REST API](#api).
+![Screenshot](ss3.png)
+Po kliknuti na marker sa nam zobrazi detail spolu s 5 najblizsimi sluzbami.
 
-# Frontend
+Aplikacia sa rozdeluje na 2 casti, client - server. Client - [frontend](#frontend) webovej aplikacie vyuziva [mapbox-react-gl](https://github.com/alex3165/react-mapbox-gl) co je nadstavba nad [mapbox](https://www.mapbox.com/) api a [mapbox.js](https://www.mapbox.com/). Server - [backend](#backend) webovej aplikacie je napisane v [node.js](https://nodejs.org/en/) spojeny s postgres databazou s postgis rozsirenim. Client a Server spolu komunikuju pomocou [REST API](#api).
+
+# Client/ Frontend
 
 The frontend application is a static HTML page (`index.html`), which shows a mapbox.js widget. It is displaying hotels, which are mostly in cities, thus the map style is based on the Emerald style. I modified the style to better highlight main sightseeing points, restaurants and bus stops, since they are all important when selecting a hotel. I also highlighted rails tracks to assist in finding a quiet location.
 
