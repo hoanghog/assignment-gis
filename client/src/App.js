@@ -6,7 +6,7 @@ import ReactJson from 'react-json-view';
 import "./App.css";
 
 const accessToken = "pk.eyJ1IjoiNXRhcmRhIiwiYSI6ImNqb3F3bnpicDA1dDMza21qeHllZTY2MTgifQ.gwfD4uBotDllImDewPuTdg";
-const style = "mapbox://styles/mapbox/streets-v8";
+const style = "mapbox://styles/5tarda/cjp83raa20f6y2qmk8rhinhrw";
 
 const Map = ReactMap({
     accessToken
@@ -15,7 +15,7 @@ const Map = ReactMap({
 
 const fillLayout = {
     visibility: 'visible'
-}
+};
 
 const fillPaint = {
     "fill-color": "#ff0000",
@@ -199,7 +199,8 @@ class App extends Component {
                 <div className="MainWindow">
                     <div>
                         <div>
-                            <label>Region</label><br/>
+                            <label><h2>LakeFinder</h2></label><br/>
+                            <label>Regions:</label>
                             <select ref="region">
                                 {this.state.categoryOptions}
                             </select>
