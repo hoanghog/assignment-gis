@@ -20,8 +20,8 @@ Build a map-based application, which lets the user see geo-based data on a map a
 
 Fill in (either in English, or in Slovak):
 
-**Application description**: `<fill in>`
+**Application description**: Aplikacia sluzi na vyhladanie jazier na Slovensku, ktore maju velkost vacsiu ako je priemer na Slovensku. Jazera sa filtruju podla regionov, kazdy region ukazuje kolko sa takychto jazier na Slovensku nachadza. Po kliknuti na urcite jazera sa automaticky priblizi na detailnejsi pohlad na jazero a zobrazi 5 najblizsich sluzieb blizko jazera.
 
-**Data source**: `<fill in>`
+**Data source**: https://download.geofabrik.de/europe/slovakia.html, ide o Slovensku cast z OSM map.
 
-**Technologies used**: `<fill in>`
+**Technologies used**: Node.js, React, Postgres/ PostGIS, knex
